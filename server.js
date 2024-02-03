@@ -22,7 +22,6 @@ app.get("/config", (req, res) => {
 });
 
 app.post("/create-payment-intent", async (req, res) => {
-  console.log(req.body);
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       currency: "sek",
@@ -43,5 +42,5 @@ app.post("/create-payment-intent", async (req, res) => {
 });
 
 app.listen(5252, () =>
-  console.log(`Node server listening at http://localhost:5252`)
+  console.log(`Node server listening at http://localhost:5252`);
 );
